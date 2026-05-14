@@ -41,7 +41,7 @@ best_knn = grid_knn.best_estimator_
 
 models = [best_rf, best_knn]
 for model in models:
-    model.fit(X_train, y_train)
+    #model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
     score = accuracy_score(y_test, y_pred)
     print(f"Accuracy of {model.__class__.__name__}: {score}")
